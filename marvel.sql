@@ -80,3 +80,6 @@ UPDATE movies SET show_time = '01:40' WHERE title = 'Guardians of the Galaxy 2';
 
 DELETE FROM movies WHERE title = 'Guardians of the Galaxy' OR title = 'Guardians of the Galaxy 2';
 SELECT * FROM movies;
+
+DELETE FROM movies WHERE title IN ('Iron Man', 'Iron Man 2', 'Iron Man 3');
+SELECT * FROM movies;

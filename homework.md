@@ -227,3 +227,31 @@ id |                title                | year | show_time
 20 | Avengers: Infinity War              | 2018 | 14:50
 21 | Captain Marvel                      | 2019 | 00:00
 (18 rows)
+
+Looks like IN operator is a thing:
+
+DELETE FROM movies WHERE title IN ('Iron Man', 'Iron Man 2', 'Iron Man 3');
+SELECT * FROM movies;
+
+DELETE 3
+ id |                title                | year | show_time
+----+-------------------------------------+------+-----------
+  2 | The Incredible Hulk                 | 2008 | 20:45
+  4 | Thor                                | 2011 | 18:55
+  5 | Captain America: The First Avenger  | 2011 | 22:50
+  6 | Avengers Assemble                   | 2012 | 12:35
+  8 | Thor: The Dark World                | 2013 | 15:55
+ 10 | Captain America: The Winter Soldier | 2014 | 21:00
+ 12 | Avengers: Age of Ultron             | 2015 | 21:25
+ 13 | Ant-Man                             | 2015 | 23:40
+ 14 | Captain America: Civil War          | 2016 | 15:15
+ 15 | Doctor Strange                      | 2016 | 22:35
+ 17 | Spider-Man: Homecoming              | 2017 | 17:40
+ 18 | Thor: Ragnarok                      | 2017 | 15:55
+ 19 | Black Panther                       | 2018 | 17:45
+ 20 | Avengers: Infinity War              | 2018 | 14:50
+ 21 | Captain Marvel                      | 2019 | 00:00
+(15 rows)
+
+
+I assume EXCEPT and BETWEEN could also be used to delete multiple rows given the correct arguements.
